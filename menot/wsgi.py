@@ -1,5 +1,5 @@
 """
-WSGI config for mentot project.
+WSGI config for menot project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mentot.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'menot.settings')
 
 application = get_wsgi_application()
