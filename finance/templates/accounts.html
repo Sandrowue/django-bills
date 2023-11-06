@@ -1,0 +1,13 @@
+{% extends "moneyflow/base.html" %}
+
+{% block content %}
+
+<h1>Tilit</h1>
+
+<ul>
+    {% for account in accounts %}
+    <li>{{account}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

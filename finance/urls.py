@@ -1,9 +1,9 @@
-from django.contrib import admin
 from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path('', include(finance.urls)),
-    path('anmin/', admin.site.urls)
+    path('', views.frontpage, name="index"),
+    path("tilit/", views.accounts, name="accounts"),
+    path("dokumentit/", views.documents, name="documents")   
 ]
