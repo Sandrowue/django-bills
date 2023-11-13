@@ -1,5 +1,7 @@
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="fi" data-bs-theme="dark">
+<html lang="{% translate 'en' context 'Language code for html lang attribute' %}" 
+      data-bs-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +16,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'index' %}">Rahavirrat</a>
+                <a class="navbar-brand" href="{% url 'index' %}">{% translate "finance"% }</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -22,7 +24,7 @@
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
                     aria-expanded="false"
-                    aria-label="Näytä tai piilota navigaatio"
+                    aria-label="{% translate 'Toggle navigation visibility' %}"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,19 +35,19 @@
                             <a
                                 class="nav-link {% if url_name == 'accounts' %}active{% endif %}"
                                 href="{% url 'accounts' %}"
-                                >Tilit</a
+                                >{% translate "Accounts"%}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 class="nav-link {% if url_name == 'documents' %}active{% endif %}"
                                 href="{% url 'documents' %}"
-                                >Dokumentit</a
+                                >{% translate "Documents"%}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:index' %}"
-                                >Ylläpito</a
+                                >% translate "Administration" context "navigation" %</a
                             >
                         </li>
                         {% endwith %}

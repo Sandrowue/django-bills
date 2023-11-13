@@ -1,8 +1,9 @@
-{% extends "moneyflow/base.html" %}
+{% extends "finance/base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>Dokumentit</h1>
+<h1>{% translate "Documents" %}</h1>
 
 <ul>
     {% for doc in documents %}

@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 12:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\finance\apps.py:8
+msgid "finance"
+msgstr "Talous"
+
+#: .\finance\models.py:6
+msgid "created at"
+msgstr "luotu"
+
+#: .\finance\models.py:16
+msgid "owner"
+msgstr "omistaja"
+
+#: .\finance\models.py:24
+msgid "Bill"
+msgstr "Lasku"
+
+#: .\finance\models.py:25
+msgid "Receipt"
+msgstr "Kuitti"
+
+#: .\finance\models.py:26
+msgid "Calculation"
+msgstr "Laskelma"
+
+#: .\finance\models.py:27
+msgid "Other"
+msgstr "Muu"
+
+#: .\finance\models.py:29 .\finance\models.py:86
+msgid "type"
+msgstr "tyyppi"
+
+#: .\finance\models.py:30 .\finance\models.py:41 .\finance\models.py:66
+msgid "name"
+msgstr "nimi"
+
+#: .\finance\models.py:31
+msgid "file"
+msgstr "tiedosto"
+
+#: .\finance\models.py:34
+msgid "document"
+msgstr "dokumentti"
+
+#: .\finance\models.py:35 .\finance\models.py:94
+msgid "documents"
+msgstr "dokumentit"
+
+#: .\finance\models.py:48
+msgid "parent category"
+msgstr "yläkategoria"
+
+#: .\finance\models.py:52 .\finance\models.py:92
+msgid "category"
+msgstr "kategoria"
+
+#: .\finance\models.py:53
+msgid "categories"
+msgstr "kategoriat"
+
+#: .\finance\models.py:67
+msgid "bank account"
+msgstr "pankkitili"
+
+#: .\finance\models.py:70 .\finance\models.py:85
+msgid "account"
+msgstr "tili"
+
+#: .\finance\models.py:71
+msgid "accounts"
+msgstr "tilit"
+
+#: .\finance\models.py:78
+msgid "Income"
+msgstr "Tulo"
+
+#: .\finance\models.py:79
+msgid "Expense"
+msgstr "Meno"
+
+#: .\finance\models.py:82
+msgid "Upcoming"
+msgstr "Tuleva"
+
+#: .\finance\models.py:83
+msgid "Done"
+msgstr "Tapahtunut"
+
+#: .\finance\models.py:87
+msgid "state"
+msgstr ""
+
+#: .\finance\models.py:88
+msgid "date"
+msgstr "tila"
+
+#: .\finance\models.py:89
+msgid "amount"
+msgstr "määrä"
+
+#: .\finance\models.py:90
+msgid "comment"
+msgstr "kommentti"
+
+#: .\finance\models.py:97
+msgid "transaction"
+msgstr "tilitapahtuma"
+
+#: .\finance\models.py:98
+msgid "transactions"
+msgstr "tilitapahtumat"
