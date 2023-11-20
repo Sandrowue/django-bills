@@ -82,7 +82,7 @@ class Transaction(TimestampModel):
         UPCOMING = ("UPCOMING", _("Upcoming"))
         DONE = ("DONE", _("Done"))
 
-    account = models.ForeignKey(Account, on_delete=models.RESTRICT, related_name="transactiens", verbose_name=_("account"),)
+    account = models.ForeignKey(Account, on_delete=models.RESTRICT, related_name="transactions", verbose_name=_("account"),)
     type = models.CharField(max_length=20, choices=Type.choices, verbose_name=_("type"),)
     state = models.CharField(max_length=20, choices=State.choices, verbose_name=_("state"),)
     date = models.DateField(verbose_name=_("date"),)

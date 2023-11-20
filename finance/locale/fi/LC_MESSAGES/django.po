@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-13 12:57+0200\n"
+"POT-Creation-Date: 2023-11-20 10:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\finance\apps.py:8
+#: .\finance\apps.py:8 .\finance\templates\finance\base.html:19
 msgid "finance"
 msgstr "Talous"
 
@@ -108,11 +108,11 @@ msgstr "Tapahtunut"
 
 #: .\finance\models.py:87
 msgid "state"
-msgstr ""
+msgstr "tila"
 
 #: .\finance\models.py:88
 msgid "date"
-msgstr "tila"
+msgstr "päivämäärä"
 
 #: .\finance\models.py:89
 msgid "amount"
@@ -129,3 +129,43 @@ msgstr "tilitapahtuma"
 #: .\finance\models.py:98
 msgid "transactions"
 msgstr "tilitapahtumat"
+
+#: .\finance\templates\finance\account_detail.html:6
+msgid "Account"
+msgstr "Tili"
+
+#: .\finance\templates\finance\account_detail.html:8
+msgid "Transactions"
+msgstr "Tilitapahtumat"
+
+#: .\finance\templates\finance\account_detail.html:16
+msgid "No transactions"
+msgstr "Ei tilitapahtumia"
+
+#: .\finance\templates\finance\account_list.html:6
+#: .\finance\templates\finance\base.html:38
+msgid "Accounts"
+msgstr "Tilit"
+
+#: .\finance\templates\finance\base.html:3
+msgctxt "Language code for html lang attribute"
+msgid "en"
+msgstr "fi"
+
+#: .\finance\templates\finance\base.html:27
+msgid "Toggle navigation visibility"
+msgstr "Näytä/Piilota navigaatio"
+
+#: .\finance\templates\finance\base.html:45
+#: .\finance\templates\finance\documents.html:6
+msgid "Documents"
+msgstr "Dokumentit"
+
+#: .\finance\templates\finance\base.html:50
+msgctxt "navigation"
+msgid "Administration"
+msgstr "Ylläpito"
+
+#: .\finance\templates\finance\index.html:6
+msgid "Welcome"
+msgstr "Tervetuloa"
