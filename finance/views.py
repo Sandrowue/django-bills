@@ -28,3 +28,6 @@ class AccountDetail(LoginRequiredMixin, DetailView):
 class DocumentList(OwnerFilteredMixin, ListView):
     model = Document
 
+class DocumentDetail(OwnerFilteredMixin, DetailView):
+    model = Document
+

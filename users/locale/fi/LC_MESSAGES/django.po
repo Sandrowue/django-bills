@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 15:01+0200\n"
+"POT-Creation-Date: 2023-11-20 15:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\users\templates\registration\login.html:8
 msgid ""
 "\n"
 "    Your username and password didn't match. Please try again.\n"
 "    "
 msgstr ""
+"\n"
+"Käyttäjätunnus ja salasana ei kelpaa. Yritä uudestaan."
 
 #: .\users\templates\registration\login.html:17
 msgid ""
@@ -31,6 +34,9 @@ msgid ""
 "            please login with an account that has access.\n"
 "            "
 msgstr ""
+"\n"
+"Käyttäjätunnuksellasi ei ole pääsyä tälle sivulle. Kirjaudu toisella "
+"tunnuksella jatkaaaksesi."
 
 #: .\users\templates\registration\login.html:24
 msgid ""
@@ -38,7 +44,13 @@ msgid ""
 "            Please login to see this page.\n"
 "            "
 msgstr ""
+"\n"
+"Kirjaudu sisään nähdääksesi tämän sivun"
+
+#: .\users\templates\registration\login.html:43
+msgid "Log in"
+msgstr ""
 
 #: .\users\templates\registration\login.html:48
 msgid "Lost password?"
-msgstr ""
+msgstr "Salasana unohtunut?"

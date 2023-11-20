@@ -7,7 +7,7 @@
 
 <ul>
     {% for doc in document_list %}
-    <li>{{doc}}</li>
+    <li><a href="{% url 'document-detail' doc.pk %}">{{doc}}</a></li>
     {% endfor %}
 </ul>
 

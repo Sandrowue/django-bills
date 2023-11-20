@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 15:01+0200\n"
+"POT-Creation-Date: 2023-11-20 16:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,6 +165,12 @@ msgstr "Dokumentit"
 msgctxt "navigation"
 msgid "Administration"
 msgstr "Ylläpito"
+
+#: .\finance\templates\finance\document_detail.html:6
+#, fuzzy
+#| msgid "Documents"
+msgid "Document"
+msgstr "Dokumentit"
 
 #: .\finance\templates\finance\index.html:6
 msgid "Welcome"

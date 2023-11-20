@@ -1,0 +1,12 @@
+{% extends "finance/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h1>{% translate "Document" %} / {{ document.get_type_display }} - {{ document.name }}</h1>
+
+{% if document.file %}
+<img src="{{ document.file.url }}">
+{% endif %}
+
+{% endblock %}

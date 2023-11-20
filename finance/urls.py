@@ -9,5 +9,10 @@ urlpatterns = [
          views.AccountDetail.as_view(),
          name="account-detail",
          ),
-    path("dokumentit/", views.DocumentList.as_view(), name="documents"),   
+    path("dokumentit/", views.DocumentList.as_view(), name="documents"),
+    path(
+        "dokumentit/<int:pk>/",
+        views.DocumentDetail.as_view(),
+        name="document-detail"
+    ),  
 ]
