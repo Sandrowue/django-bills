@@ -21,5 +21,6 @@ import finance.urls
 
 urlpatterns = [
     path("", include(finance.urls)),
+    path("kayttajatilit/", include(users.urls)),
     path('admin/', admin.site.urls),
 ]

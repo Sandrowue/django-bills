@@ -1,3 +1,4 @@
+from typing import Any
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
@@ -10,24 +11,20 @@ from .models import Account, Document
 def frontpage(request):
     return render(request, "finance/index.html")
 
-class AccountView(View):
-    model = Account
-
+class OwnerFilteredMixin(LoginRequiredMixin):
     def get_queryset(self):
         return super().get_queryset().filter(owner=self.request.user)
 
-class AccountsList(LoginRequiredMixin, AccountView, ListView):
-    pass
+class AccountList(OwnerFilteredMixin, ListView):
+    model = Account
    
-class AccountDetail(LoginRequiredMixin, AccountView, DetailView):
+class AccountDetail(LoginRequiredMixin, DetailView):
+    model = Account
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["transactions"] = self.object.transactions.all()
         return context
 
-@login_required
-def documents(request):
-    context = {
-        "documents": Document.objects.filter(owner=request.user),
-    }
-    return render(request, "finance/documents.html", context)
+class DocumentList(OwnerFilteredMixin, ListView):
+    model = Document
+
