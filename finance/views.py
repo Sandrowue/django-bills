@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, View
 
-from .models import Account, Document
+from .models import Account, Category, Document
 
 # Create your views here.
 @login_required
@@ -30,4 +30,12 @@ class DocumentList(OwnerFilteredMixin, ListView):
 
 class DocumentDetail(OwnerFilteredMixin, DetailView):
     model = Document
+
+class CategoryList(OwnerFilteredMixin, ListView):
+    model = Category
+
+class CategoryDetail(OwnerFilteredMixin, DetailView):
+    model = Category
+
+
 

@@ -46,10 +46,29 @@
                             >
                         </li>
                         <li class="nav-item">
+                            <a
+                                class="nav-link {% if url_name == 'categories' %}active{% endif %}"
+                                href="{% url 'categories' %}"
+                                >{% translate "Categories" %}</a
+                                >
+                        {% if user.is_staff %}
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:index' %}"
                                 >{% translate "Administration" context "navigation" %}</a
                             >
                         </li>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <input
+                                    class="nav-link"
+                                    type="submit"
+                                    value="{% translate "Log out" %}">
+                            </form>
+                        </li>
+                        {% endif %}
                         {% endwith %}
                     </ul>
                 </div>
