@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 class TimestampModel(models.Model):
@@ -61,6 +62,9 @@ class Category(TimestampModel, OwnedModel):
             parent_str = ""
         prefix = f"{parent_str} / " if parent_str else ""
         return f"{prefix}{self.name}"
+    
+    def get_absolute_url(self):
+        return reverse("category-detail", kwargs={"pk": self.pk})
    
 class Account(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100, verbose_name=_("name"),)

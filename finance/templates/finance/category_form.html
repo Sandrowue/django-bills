@@ -1,0 +1,17 @@
+{% extends "finance/base.html" %}
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<h1>{% translate "New Category" %}</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% bootstrap_form form %}
+
+    <input type="submit" value="{% translate 'Save' %}" />
+</form>
+
+{% endblock %}

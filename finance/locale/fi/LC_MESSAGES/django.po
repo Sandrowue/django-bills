@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 16:16+0200\n"
+"POT-Creation-Date: 2023-12-04 14:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,111 +22,111 @@ msgstr ""
 msgid "finance"
 msgstr "Talous"
 
-#: .\finance\models.py:6
+#: .\finance\models.py:7
 msgid "created at"
 msgstr "luotu"
 
-#: .\finance\models.py:16
+#: .\finance\models.py:17
 msgid "owner"
 msgstr "omistaja"
 
-#: .\finance\models.py:24
+#: .\finance\models.py:25
 msgid "Bill"
 msgstr "Lasku"
 
-#: .\finance\models.py:25
+#: .\finance\models.py:26
 msgid "Receipt"
 msgstr "Kuitti"
 
-#: .\finance\models.py:26
+#: .\finance\models.py:27
 msgid "Calculation"
 msgstr "Laskelma"
 
-#: .\finance\models.py:27
+#: .\finance\models.py:28
 msgid "Other"
 msgstr "Muu"
 
-#: .\finance\models.py:29 .\finance\models.py:86
+#: .\finance\models.py:30 .\finance\models.py:90
 msgid "type"
 msgstr "tyyppi"
 
-#: .\finance\models.py:30 .\finance\models.py:41 .\finance\models.py:66
+#: .\finance\models.py:31 .\finance\models.py:42 .\finance\models.py:70
 msgid "name"
 msgstr "nimi"
 
-#: .\finance\models.py:31
+#: .\finance\models.py:32
 msgid "file"
 msgstr "tiedosto"
 
-#: .\finance\models.py:34
+#: .\finance\models.py:35
 msgid "document"
 msgstr "dokumentti"
 
-#: .\finance\models.py:35 .\finance\models.py:94
+#: .\finance\models.py:36 .\finance\models.py:98
 msgid "documents"
 msgstr "dokumentit"
 
-#: .\finance\models.py:48
+#: .\finance\models.py:49
 msgid "parent category"
 msgstr "yläkategoria"
 
-#: .\finance\models.py:52 .\finance\models.py:92
+#: .\finance\models.py:53 .\finance\models.py:96
 msgid "category"
 msgstr "kategoria"
 
-#: .\finance\models.py:53
+#: .\finance\models.py:54
 msgid "categories"
 msgstr "kategoriat"
 
-#: .\finance\models.py:67
+#: .\finance\models.py:71
 msgid "bank account"
 msgstr "pankkitili"
 
-#: .\finance\models.py:70 .\finance\models.py:85
+#: .\finance\models.py:74 .\finance\models.py:89
 msgid "account"
 msgstr "tili"
 
-#: .\finance\models.py:71
+#: .\finance\models.py:75
 msgid "accounts"
 msgstr "tilit"
 
-#: .\finance\models.py:78
+#: .\finance\models.py:82
 msgid "Income"
 msgstr "Tulo"
 
-#: .\finance\models.py:79
+#: .\finance\models.py:83
 msgid "Expense"
 msgstr "Meno"
 
-#: .\finance\models.py:82
+#: .\finance\models.py:86
 msgid "Upcoming"
 msgstr "Tuleva"
 
-#: .\finance\models.py:83
+#: .\finance\models.py:87
 msgid "Done"
 msgstr "Tapahtunut"
 
-#: .\finance\models.py:87
+#: .\finance\models.py:91
 msgid "state"
 msgstr "tila"
 
-#: .\finance\models.py:88
+#: .\finance\models.py:92
 msgid "date"
 msgstr "päivämäärä"
 
-#: .\finance\models.py:89
+#: .\finance\models.py:93
 msgid "amount"
 msgstr "määrä"
 
-#: .\finance\models.py:90
+#: .\finance\models.py:94
 msgid "comment"
 msgstr "kommentti"
 
-#: .\finance\models.py:97
+#: .\finance\models.py:101
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\finance\models.py:98
+#: .\finance\models.py:102
 msgid "transactions"
 msgstr "tilitapahtumat"
 
@@ -161,10 +161,37 @@ msgstr "Näytä/Piilota navigaatio"
 msgid "Documents"
 msgstr "Dokumentit"
 
-#: .\finance\templates\finance\base.html:50
+#: .\finance\templates\finance\base.html:52
+#: .\finance\templates\finance\category_list.html:6
+#, fuzzy
+#| msgid "categories"
+msgid "Categories"
+msgstr "kategoriat"
+
+#: .\finance\templates\finance\base.html:57
 msgctxt "navigation"
 msgid "Administration"
 msgstr "Ylläpito"
+
+#: .\finance\templates\finance\base.html:68
+msgid "Log out"
+msgstr ""
+
+#: .\finance\templates\finance\category_detail.html:6
+#, fuzzy
+#| msgid "category"
+msgid "Category"
+msgstr "kategoria"
+
+#: .\finance\templates\finance\category_form.html:7
+#, fuzzy
+#| msgid "category"
+msgid "New Category"
+msgstr "kategoria"
+
+#: .\finance\templates\finance\category_form.html:14
+msgid "Save"
+msgstr ""
 
 #: .\finance\templates\finance\document_detail.html:6
 #, fuzzy
