@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 14:49+0200\n"
+"POT-Creation-Date: 2023-12-11 13:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,111 +22,132 @@ msgstr ""
 msgid "finance"
 msgstr "Talous"
 
-#: .\finance\models.py:7
+#: .\finance\models.py:8
 msgid "created at"
 msgstr "luotu"
 
-#: .\finance\models.py:17
+#: .\finance\models.py:18
 msgid "owner"
 msgstr "omistaja"
 
-#: .\finance\models.py:25
+#: .\finance\models.py:26
 msgid "Bill"
 msgstr "Lasku"
 
-#: .\finance\models.py:26
+#: .\finance\models.py:27
 msgid "Receipt"
 msgstr "Kuitti"
 
-#: .\finance\models.py:27
+#: .\finance\models.py:28
 msgid "Calculation"
 msgstr "Laskelma"
 
-#: .\finance\models.py:28
+#: .\finance\models.py:29
 msgid "Other"
 msgstr "Muu"
 
-#: .\finance\models.py:30 .\finance\models.py:90
+#: .\finance\models.py:31 .\finance\models.py:112
 msgid "type"
 msgstr "tyyppi"
 
-#: .\finance\models.py:31 .\finance\models.py:42 .\finance\models.py:70
+#: .\finance\models.py:32 .\finance\models.py:43 .\finance\models.py:92
 msgid "name"
 msgstr "nimi"
 
-#: .\finance\models.py:32
+#: .\finance\models.py:33
 msgid "file"
 msgstr "tiedosto"
 
-#: .\finance\models.py:35
+#: .\finance\models.py:36
 msgid "document"
 msgstr "dokumentti"
 
-#: .\finance\models.py:36 .\finance\models.py:98
+#: .\finance\models.py:37 .\finance\models.py:120
 msgid "documents"
 msgstr "dokumentit"
 
-#: .\finance\models.py:49
+#: .\finance\models.py:50
 msgid "parent category"
 msgstr "yläkategoria"
 
-#: .\finance\models.py:53 .\finance\models.py:96
+#: .\finance\models.py:54 .\finance\models.py:118
 msgid "category"
 msgstr "kategoria"
 
-#: .\finance\models.py:54
+#: .\finance\models.py:55
 msgid "categories"
 msgstr "kategoriat"
 
-#: .\finance\models.py:71
+#: .\finance\models.py:72
+msgid "Expenses"
+msgstr "Menot"
+
+#: .\finance\models.py:73
+msgid "Living Costs"
+msgstr "Asumiskulut"
+
+#: .\finance\models.py:74
+msgid "Food"
+msgstr "Ruoka"
+
+#: .\finance\models.py:75
+msgctxt "category name"
+msgid "Income"
+msgstr "Tulot"
+
+#: .\finance\models.py:76
+msgid "Salary"
+msgstr "Palkka"
+
+#: .\finance\models.py:93
 msgid "bank account"
 msgstr "pankkitili"
 
-#: .\finance\models.py:74 .\finance\models.py:89
+#: .\finance\models.py:96 .\finance\models.py:111
 msgid "account"
 msgstr "tili"
 
-#: .\finance\models.py:75
+#: .\finance\models.py:97
 msgid "accounts"
 msgstr "tilit"
 
-#: .\finance\models.py:82
+#: .\finance\models.py:104
 msgid "Income"
 msgstr "Tulo"
 
-#: .\finance\models.py:83
+#: .\finance\models.py:105
 msgid "Expense"
 msgstr "Meno"
 
-#: .\finance\models.py:86
+#: .\finance\models.py:108
 msgid "Upcoming"
 msgstr "Tuleva"
 
-#: .\finance\models.py:87
+#: .\finance\models.py:109
 msgid "Done"
 msgstr "Tapahtunut"
 
-#: .\finance\models.py:91
+#: .\finance\models.py:113
 msgid "state"
 msgstr "tila"
 
-#: .\finance\models.py:92
+#: .\finance\models.py:114
 msgid "date"
 msgstr "päivämäärä"
 
-#: .\finance\models.py:93
+#: .\finance\models.py:115
 msgid "amount"
 msgstr "määrä"
 
-#: .\finance\models.py:94
+#: .\finance\models.py:116
 msgid "comment"
 msgstr "kommentti"
 
-#: .\finance\models.py:101
+#: .\finance\models.py:123
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\finance\models.py:102
+#: .\finance\models.py:124
 msgid "transactions"
 msgstr "tilitapahtumat"
 
@@ -163,8 +184,6 @@ msgstr "Dokumentit"
 
 #: .\finance\templates\finance\base.html:52
 #: .\finance\templates\finance\category_list.html:6
-#, fuzzy
-#| msgid "categories"
 msgid "Categories"
 msgstr "kategoriat"
 
@@ -175,29 +194,65 @@ msgstr "Ylläpito"
 
 #: .\finance\templates\finance\base.html:68
 msgid "Log out"
+msgstr "Kirjaudu ulos"
+
+#: .\finance\templates\finance\category_confirm_delete.html:7
+msgid "Delte Category"
+msgstr "Poista Kategoria"
+
+#: .\finance\templates\finance\category_confirm_delete.html:11
+#, python-format
+msgid ""
+"\n"
+"        Are you sure you want to delete \"%(category)s\"?\n"
+"        "
 msgstr ""
 
+#: .\finance\templates\finance\category_create_defaults_form.html:5
+#: .\finance\templates\finance\category_list.html:12
+msgid "Create Default Categories"
+msgstr "Luo oletuskategoriat"
+
+#: .\finance\templates\finance\category_create_defaults_form.html:11
+msgid ""
+"\n"
+"        Do you really want to create the default categories?\n"
+"        "
+msgstr ""
+"\n"
+"Haluatko varmasti luoda oletuskategoriat?"
+
+#: .\finance\templates\finance\category_create_defaults_form.html:18
+msgid "Create"
+msgstr "luo"
+
+#: .\finance\templates\finance\category_create_defaults_form.html:22
+msgid "Cancel"
+msgstr "Peruuta"
+
 #: .\finance\templates\finance\category_detail.html:6
-#, fuzzy
-#| msgid "category"
 msgid "Category"
 msgstr "kategoria"
 
+#: .\finance\templates\finance\category_detail.html:9
+msgid "Delete"
+msgstr "Poista"
+
 #: .\finance\templates\finance\category_form.html:7
-#, fuzzy
-#| msgid "category"
 msgid "New Category"
 msgstr "kategoria"
 
 #: .\finance\templates\finance\category_form.html:14
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
+
+#: .\finance\templates\finance\category_list.html:10
+msgid "Create New Category"
+msgstr "Luo uusi kategoria"
 
 #: .\finance\templates\finance\document_detail.html:6
-#, fuzzy
-#| msgid "Documents"
 msgid "Document"
-msgstr "Dokumentit"
+msgstr "Dokumentti"
 
 #: .\finance\templates\finance\index.html:6
 msgid "Welcome"

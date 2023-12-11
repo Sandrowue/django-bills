@@ -1,0 +1,26 @@
+{% extends "finance/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% translate "Create Default Categories" %}</h1>
+
+<form method ="post">
+    {% {% csrf_token %} {{ form.as_p }} %}
+
+    <p>
+        {% blocktrans %}
+        Do you really want to create the default categories?
+        {% endblocktrans %}
+    </p>
+
+    <input
+        type="submit"
+        value="{% translate 'Create' %}"
+        class="btn btn-primary"
+    />
+    <a href="{% url 'categories' %}" class="btn btn-secondary"
+        >{% translate 'Cancel' %}</a
+        >
+</form>
+
+{% endblock %}

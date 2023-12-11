@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import pgettext_lazy
 
 class TimestampModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created at"),)
@@ -65,6 +66,27 @@ class Category(TimestampModel, OwnedModel):
     
     def get_absolute_url(self):
         return reverse("category-detail", kwargs={"pk": self.pk})
+    
+    defaults = [ # Default Categories
+    # key, parent_key, name
+    ("exp", None, _("Expenses")),
+    ("living", "exp", _("Living Costs")),
+    ("food", "living", _("Food")),
+    ("income", None, pgettext_lazy("category name", "Income")),
+    ("salary", "income", _("Salary")),
+    ]
+
+    @classmethod
+    def create_defaults(cls, owner):
+        key_to_id = {}
+        for key, parent_key, name in cls.defaults:
+            parent_id = key_to_id[parent_key] if parent_key else None
+            category = cls.objects.update_or_create(
+                name=name,
+                owner=owner,
+                parent_id=parent_id
+            )[0]
+            key_to_id[key] = category.id
    
 class Account(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100, verbose_name=_("name"),)

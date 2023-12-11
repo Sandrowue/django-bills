@@ -6,7 +6,11 @@
 <h1>{% translate "Categories" %}</h1>
 
 <div class="btn-group m-3" role="group">
-    <a href="{% url 'category-new' %}" class="btn btn-primary">Lisää uusi</a>
+    <a href="{% url 'category-new' %}" class="btn btn-primary"
+        >{% translate 'Create New Category' %}</a>
+    <a href="{% url 'category-create-defaults' %}" class="btn btn-secondary"
+        >{% translate 'Create Default Categories' %}</a
+    >
 </div>
 
 <ul>

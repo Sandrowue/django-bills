@@ -10,7 +10,12 @@ class AccountAdmin(ModelAdmin):
 
 @admin.register(Category)
 class AccountAdmin(ModelAdmin):
-    pass
+    list_display = [
+        "id",
+        "__str__",
+        "created_at"
+    ]
+    list_display_links = list_display
 
 
 @admin.register(Account)
