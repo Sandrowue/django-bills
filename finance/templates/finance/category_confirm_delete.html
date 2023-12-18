@@ -13,7 +13,9 @@
         {% endblocktrans %}
     </p>
     {{ form }}
-    <input type="submit" value="Confirm">
+    <input type="submit" value="{% translate 'Delete' %}" class="btn btn-danger"/>
+    <a href="{% url 'category-detail' category.pk %}" class="btn btn-secondary"
+    >{% translate 'Cancel' %}</a>
 </form>
 
 {% endblock %}

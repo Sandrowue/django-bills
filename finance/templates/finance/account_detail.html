@@ -3,9 +3,26 @@
 
 {% block content %}
 
-<h1>{% translate "Account" %} - {{ account }}</h1>
+<h1>
+    {% translate "Account" %} - {{ account }}
+    <a
+        href="{% url 'account-delete' account.pk %}"
+        class="btn btn-danger btn-sm"
+    >{% translate 'Delete' %}
+</h1>
+
+{% if account.bank_account %}
+<p>{% translate 'Bank Account' %}: {{account.bank_account}}</p>
+{% endif %}
 
 <h2>{% translate "Transactions" %}</h2>
+
+<div class="btn-group m-3" role="group">
+    <a
+        href="{% url 'transaction-new' account.pk %}"
+        class="btn btn-primary"
+        >{% translate 'Create New Transaction' %}</a>
+</div>
 
 <ul>
     {% for transaction in transactions %}
@@ -16,5 +33,11 @@
     <li>{% translate "No transactions" %}</li>
     {% endfor %}
 </ul>
+
+<div class="mt-3">
+    <a href="{% url 'accounts' %}" class="btn btn-secondary"
+        >{% translate 'All Accounts' %}</a
+        >
+</div>
 
 {% endblock %}

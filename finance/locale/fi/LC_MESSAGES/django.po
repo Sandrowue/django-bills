@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-11 13:55+0200\n"
+"POT-Creation-Date: 2023-12-18 16:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "Laskelma"
 msgid "Other"
 msgstr "Muu"
 
-#: .\finance\models.py:31 .\finance\models.py:112
+#: .\finance\models.py:31 .\finance\models.py:116
 msgid "type"
 msgstr "tyyppi"
 
@@ -62,7 +62,7 @@ msgstr "tiedosto"
 msgid "document"
 msgstr "dokumentti"
 
-#: .\finance\models.py:37 .\finance\models.py:120
+#: .\finance\models.py:37 .\finance\models.py:124
 msgid "documents"
 msgstr "dokumentit"
 
@@ -70,7 +70,7 @@ msgstr "dokumentit"
 msgid "parent category"
 msgstr "yläkategoria"
 
-#: .\finance\models.py:54 .\finance\models.py:118
+#: .\finance\models.py:54 .\finance\models.py:122
 msgid "category"
 msgstr "kategoria"
 
@@ -103,7 +103,7 @@ msgstr "Palkka"
 msgid "bank account"
 msgstr "pankkitili"
 
-#: .\finance\models.py:96 .\finance\models.py:111
+#: .\finance\models.py:96 .\finance\models.py:115
 msgid "account"
 msgstr "tili"
 
@@ -111,62 +111,117 @@ msgstr "tili"
 msgid "accounts"
 msgstr "tilit"
 
-#: .\finance\models.py:104
+#: .\finance\models.py:108
 msgid "Income"
 msgstr "Tulo"
 
-#: .\finance\models.py:105
+#: .\finance\models.py:109
 msgid "Expense"
 msgstr "Meno"
 
-#: .\finance\models.py:108
+#: .\finance\models.py:112
 msgid "Upcoming"
 msgstr "Tuleva"
 
-#: .\finance\models.py:109
+#: .\finance\models.py:113
 msgid "Done"
 msgstr "Tapahtunut"
 
-#: .\finance\models.py:113
+#: .\finance\models.py:117
 msgid "state"
 msgstr "tila"
 
-#: .\finance\models.py:114
+#: .\finance\models.py:118
 msgid "date"
 msgstr "päivämäärä"
 
-#: .\finance\models.py:115
+#: .\finance\models.py:119
 msgid "amount"
 msgstr "määrä"
 
-#: .\finance\models.py:116
+#: .\finance\models.py:120
 msgid "comment"
 msgstr "kommentti"
 
-#: .\finance\models.py:123
+#: .\finance\models.py:127
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\finance\models.py:124
+#: .\finance\models.py:128
 msgid "transactions"
 msgstr "tilitapahtumat"
 
-#: .\finance\templates\finance\account_detail.html:6
+#: .\finance\templates\finance\account_confirm_delete.html:7
+msgid "Delete Account"
+msgstr "Poista Tilit"
+
+#: .\finance\templates\finance\account_confirm_delete.html:12
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Are you sure you want to delete \"%(category)s\"?\n"
+#| "        "
+msgid ""
+"\n"
+"        Are you sure you want to delete \"%(account)s\"?\n"
+"        "
+msgstr "Oletko varma että haluat poistaa kategorian"
+
+#: .\finance\templates\finance\account_confirm_delete.html:19
+#: .\finance\templates\finance\account_detail.html:11
+#: .\finance\templates\finance\category_confirm_delete.html:16
+#: .\finance\templates\finance\category_detail.html:11
+msgid "Delete"
+msgstr "Poista"
+
+#: .\finance\templates\finance\account_confirm_delete.html:25
+#: .\finance\templates\finance\category_confirm_delete.html:18
+#: .\finance\templates\finance\category_create_defaults_form.html:22
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: .\finance\templates\finance\account_detail.html:7
 msgid "Account"
 msgstr "Tili"
 
-#: .\finance\templates\finance\account_detail.html:8
+#: .\finance\templates\finance\account_detail.html:15
+msgid "Bank Account"
+msgstr "pankkitili"
+
+#: .\finance\templates\finance\account_detail.html:18
 msgid "Transactions"
 msgstr "Tilitapahtumat"
 
-#: .\finance\templates\finance\account_detail.html:16
+#: .\finance\templates\finance\account_detail.html:24
+msgid "Create New Transaction"
+msgstr "Luo uusi tapahtuma"
+
+#: .\finance\templates\finance\account_detail.html:33
 msgid "No transactions"
 msgstr "Ei tilitapahtumia"
+
+#: .\finance\templates\finance\account_detail.html:39
+msgid "All Accounts"
+msgstr "Kaikki Tilit"
+
+#: .\finance\templates\finance\account_form.html:7
+msgid "New Account"
+msgstr "Uusi Tili"
+
+#: .\finance\templates\finance\account_form.html:14
+#: .\finance\templates\finance\category_form.html:14
+#: .\finance\templates\finance\transaction_form.html:13
+msgid "Save"
+msgstr "Tallenna"
 
 #: .\finance\templates\finance\account_list.html:6
 #: .\finance\templates\finance\base.html:38
 msgid "Accounts"
 msgstr "Tilit"
+
+#: .\finance\templates\finance\account_list.html:10
+msgid "Create New Account"
+msgstr "Luo uusi Tili"
 
 #: .\finance\templates\finance\base.html:3
 msgctxt "Language code for html lang attribute"
@@ -192,7 +247,11 @@ msgctxt "navigation"
 msgid "Administration"
 msgstr "Ylläpito"
 
-#: .\finance\templates\finance\base.html:68
+#: .\finance\templates\finance\base.html:71
+msgid "Language"
+msgstr "Kieli"
+
+#: .\finance\templates\finance\base.html:105
 msgid "Log out"
 msgstr "Kirjaudu ulos"
 
@@ -206,7 +265,7 @@ msgid ""
 "\n"
 "        Are you sure you want to delete \"%(category)s\"?\n"
 "        "
-msgstr ""
+msgstr "Oletko varma että haluat poistaa kategorian"
 
 #: .\finance\templates\finance\category_create_defaults_form.html:5
 #: .\finance\templates\finance\category_list.html:12
@@ -226,25 +285,17 @@ msgstr ""
 msgid "Create"
 msgstr "luo"
 
-#: .\finance\templates\finance\category_create_defaults_form.html:22
-msgid "Cancel"
-msgstr "Peruuta"
-
-#: .\finance\templates\finance\category_detail.html:6
+#: .\finance\templates\finance\category_detail.html:7
 msgid "Category"
 msgstr "kategoria"
 
-#: .\finance\templates\finance\category_detail.html:9
-msgid "Delete"
-msgstr "Poista"
+#: .\finance\templates\finance\category_detail.html:19
+msgid "All Categories"
+msgstr "Kaikki kategoriat"
 
 #: .\finance\templates\finance\category_form.html:7
 msgid "New Category"
 msgstr "kategoria"
-
-#: .\finance\templates\finance\category_form.html:14
-msgid "Save"
-msgstr "Tallenna"
 
 #: .\finance\templates\finance\category_list.html:10
 msgid "Create New Category"
@@ -257,3 +308,7 @@ msgstr "Dokumentti"
 #: .\finance\templates\finance\index.html:6
 msgid "Welcome"
 msgstr "Tervetuloa"
+
+#: .\finance\templates\finance\transaction_form.html:7
+msgid "New Transaction"
+msgstr "Uusi Tilitapahtuma"

@@ -5,6 +5,11 @@
 
 <h1>{% translate "Accounts" %}</h1>
 
+<div class="btn-group m-3" role="group">
+    <a href="{% url 'account-new' %}" class="btn btn-primary"
+    >{% translate 'Create New Account' %}</a>
+</div>
+
 <ul>
     {% for account in account_list %}
     <li>

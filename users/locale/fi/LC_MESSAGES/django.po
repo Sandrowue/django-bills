@@ -49,7 +49,7 @@ msgstr ""
 
 #: .\users\templates\registration\login.html:43
 msgid "Log in"
-msgstr ""
+msgstr "Kirjautu sisään"
 
 #: .\users\templates\registration\login.html:48
 msgid "Lost password?"
