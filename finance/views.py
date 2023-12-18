@@ -58,7 +58,7 @@ class CreateDefaultCategoriesForm(forms.Form):
 
 class CreateDefaultCategoriesFormView(FormView):
     form_class = CreateDefaultCategoriesForm
-    template_name = "finance/category_create_default_form.html"
+    template_name = "finance/category_create_defaults_form.html"
     success_url = reverse_lazy("categories")
 
     def form_valid(self, form):

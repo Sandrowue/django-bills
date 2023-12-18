@@ -5,7 +5,7 @@
 <h1>{% translate "Create Default Categories" %}</h1>
 
 <form method ="post">
-    {% {% csrf_token %} {{ form.as_p }} %}
+    {% csrf_token %} {{ form.as_p }}
 
     <p>
         {% blocktrans %}
